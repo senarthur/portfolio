@@ -8,6 +8,8 @@ section {
     padding: var(--section-padding);
 }
 
+/* HOME SECTION */
+
 #home {
     .banner {
         display: flex;
@@ -114,6 +116,68 @@ section {
                         font-size: 14px;
                     }
                 }
+            }
+        }
+    }
+}
+
+/* SKILLS SECTION */
+#skills {
+    background-color: #1e1e1e;
+    min-height: 50dvh;
+
+    h3 {
+        font-size: 40px;
+        text-align: center;
+        color: var(--highlight-color);
+    }
+
+    .skills {
+        margin-top: 90px;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 90px;
+        
+        .languages, .framework {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+            .skill {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 100px;
+                cursor: pointer;
+            }
+
+            .circle {
+                width: 52px;
+                height: 52px;
+                border-radius: 52px;
+
+                border: 1px solid var(--highlight-color);
+                padding: 10px;
+                text-align: center;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 30px;
+                }
+            }
+
+            span {
+                display: block;
+                color: var(--highlight-color);
+                text-align: center;
             }
         }
     }
