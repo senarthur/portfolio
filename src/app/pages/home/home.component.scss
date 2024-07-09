@@ -388,18 +388,52 @@ section {
             align-items: center;
             gap: 5px;
             
-            img {
+            .email {
                 width: 40px;
                 height: 40px;
                 padding: 5px;
 
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
                 border: 1px solid var(--highlight-secondary);
                 border-radius: 40px;
+
+                position: relative;
+                z-index: 2;
+
+                &::before {
+                    content: "";
+                    width: 40px;
+                    height: 40px;
+                    position: absolute;
+                    background-color: var(--highlight-color);
+                    border-radius: 52px;
+                    transform: scale(0);
+                    transition: .3s ease-in-out;
+                }
             }
 
             span {
                 font-size: 18px;
-                color: var(--highlight-secondary);
+                color: var(--highlight-color);
+                opacity: 0.7;
+            }
+
+            &:hover {
+                .email::before {
+                    transform: scale(1);
+                    z-index: -1;
+                }
+
+                svg path {
+                    fill: #000;
+                }
+
+                span {
+                    opacity: 1;
+                }
             }
         }
     }
@@ -417,12 +451,16 @@ section {
             input {
                 background: none;
                 outline: none;
-                border: 1px solid var(--highlight-secondary);
+                border: 2px solid var(--highlight-secondary);
                 border-radius: 10px;
                 width: 100%;
                 padding: 20px;
                 color: var(--highlight-color);
                 margin-bottom: 10px;
+
+                &:hover {
+                    border-color: var(--highlight-color);
+                }
             }
 
             .flex {
@@ -450,9 +488,13 @@ section {
 
                 background: none;
                 border-radius: 20px;
-                border: 1px solid var(--highlight-secondary);
+                border: 2px solid var(--highlight-secondary);
 
                 color: var(--highlight-color);
+
+                &:hover {
+                    border-color: var(--highlight-color);
+                }
             }
 
             textarea::placeholder {
@@ -473,6 +515,10 @@ section {
                 font-weight: 700;
 
                 cursor: pointer;
+
+                &:hover {
+                    background-color: var(--highlight-color);
+                }
             }
         }
     }
