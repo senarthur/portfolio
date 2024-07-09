@@ -22,17 +22,47 @@ footer {
     }
 
     .social-medias {
-        display: flex;
-        gap: 10px;
+        display: inline-flex;
+        gap: 12px;
 
-        img {
-            width: 50px;
-            height: 50px;
+        a {        
+            display: flex;
+            align-items: center;
+            justify-content: center;
             
-            border: 1px solid var(--highlight-secondary);
-            border-radius: 50px;
+            width: 42px;
+            height: 42px;
+            padding: 0;
 
-            padding: 5px;
+            border: 1px solid var(--highlight-color);
+            border-radius: 25px;
+
+            cursor: pointer;
+            position: relative;
+            z-index: 2;
+
+
+            &::before {
+                content: "";
+                width: 42px;
+                height: 42px;
+                position: absolute;
+                background-color: var(--highlight-color);
+                border-radius: 42px;
+                transform: scale(0);
+                transition: .3s ease-in-out;
+            }
+
+            &:hover {
+                &::before {
+                    transform: scale(1);
+                    z-index: -1;
+                }
+
+                svg path {
+                    fill: #000;
+                }
+            }
         }
     }
 }
