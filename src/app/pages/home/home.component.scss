@@ -27,10 +27,11 @@ section {
                 font-weight: 300;
             }
 
-            h3 {
+            .name {
                 color: var(--highlight-color);
                 font-size: 130px;
                 margin: -30px 0;
+                font-weight: 700;
             }
 
             p {
@@ -260,9 +261,40 @@ section {
 
     .projects {
         width: 100%;
-        overflow-x: hidden;
-        display: flex;
+        max-width: 1360px;
+        overflow-x: auto;
+
+        scrollbar-width: none;
         position: relative;
+
+        button {
+            display: block;
+            margin-right: 0;
+            margin-left: auto;
+            margin-bottom: 10px;
+
+            background: none;
+            padding: 5px 15px;
+            border-radius: 30px;
+
+            outline: none;
+            border: 1px solid var(--highlight-color);
+            color: var(--highlight-color);
+
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+        }
+
+        .projects-container {
+            display: flex;
+            width: fit-content;
+
+            position: relative;
+            transition: 1.5s ease;
+        }
 
         .project-card {
             width: 340px;
@@ -340,7 +372,28 @@ section {
             }
         }
 
-        .arrow {
+        .arrow-left {
+            visibility: hidden;
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+
+            background-color: #1e1e1e;
+            padding: 10px;
+            
+            position: absolute;
+            left: 0;
+            top: 50%;
+            z-index: 6;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            cursor: pointer;
+        }
+
+        .arrow-right {
             width: 40px;
             height: 40px;
             border-radius: 40px;
