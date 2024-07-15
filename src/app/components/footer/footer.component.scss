@@ -22,7 +22,7 @@ footer {
     }
 
     .social-medias {
-        display: inline-flex;
+        display: flex;
         gap: 12px;
 
         a {        
@@ -63,6 +63,20 @@ footer {
                     fill: #000;
                 }
             }
+        }
+    }
+}
+
+@media (max-width: 465px) {
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+
+        span {
+            display: block;
+            width: fit-content;
+            margin: 0 auto;
         }
     }
 }
