@@ -23,6 +23,10 @@ nav {
         align-items: center;
         gap: 25px;
 
+        .close-tag {
+            display: none;
+        }
+
         a {
             display: block;
             color: var(--highlight-color);
@@ -97,6 +101,45 @@ nav {
                     }
                 }
             }
+        }
+    }
+
+    .menu {
+        // display: flex;
+        justify-content: center;
+        align-items: center;
+
+        cursor: pointer;
+
+        display: none;
+    }
+}
+
+@media (max-width: 875px) {
+    nav {
+        .nav-links {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-image: url('../../../assets/bg.png');
+
+            flex-direction: column;
+            justify-content: center;
+
+            .close-tag {
+                display: block;
+
+                position: absolute;
+                top: 15%;
+                right: 20%;
+            }
+        }
+        
+        .menu {
+            display: flex;
         }
     }
 }
