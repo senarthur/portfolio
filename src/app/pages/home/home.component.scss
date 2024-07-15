@@ -42,6 +42,11 @@ section {
                 font-size: 25px;
             }
         }
+
+        img {
+            width: 100%;
+            max-width: 275px;
+        }
     }
     
     a {
@@ -98,12 +103,14 @@ section {
         .cards {
             display: flex;
             justify-content: space-around;
+            gap: 20px;
 
             .card {
                 border: 1px solid var(--highlight-color);
                 border-radius: 20px;
                 max-width: 400px;
-                width: 350px;
+                width: 100%;
+                max-width: 350px;
                 padding: 30px;
                 position: relative;
                 z-index: 10;
@@ -426,6 +433,11 @@ section {
 
     .left-side {
         width: 50%;
+
+        img {
+            width: 100%;
+            max-width: 450px;
+        }
         
         h3 {
             font-size: 40px;
@@ -598,6 +610,10 @@ section {
     }
 
     #about-me {
+
+        padding: 30px;
+        border-radius: 60px;
+        
         p {
             font-size: 14px !important;
         }
