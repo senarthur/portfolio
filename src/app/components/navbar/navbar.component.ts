@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -9,4 +9,13 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  @ViewChild('navbar') navbar!: ElementRef;
+
+  activeNavbar() {
+    this.navbar.nativeElement.classList.add('active');
+  }
+
+  disableNavbar() {
+    this.navbar.nativeElement.classList.remove('active');
+  }
 }

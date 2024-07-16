@@ -115,6 +115,10 @@ nav {
     }
 }
 
+.active {
+    display: flex !important;
+}
+
 @media (max-width: 875px) {
     nav {
         .nav-links {
