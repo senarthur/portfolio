@@ -154,11 +154,19 @@
     </section>
 
     <section id="projects">
-        <h3>Projetos</h3>
-        <div class="projects">
+        <div class="top">
+            <div class="title">
+                <h3>Projetos</h3>
+                <p>
+                    Pecorra por todos os meus projetos desde o início de minha jornada.
+                    Passe o cursor sobre os cards para visualizar os detalhes.
+                </p>
+            </div>
             <button>Ver tudo</button>
+        </div>
+        <div class="projects">
             <div class="projects-container" #container>
-                <div class="project-card">
+                <div class="project-card horizon">
                     <div class="project-content">
                         <img src="../../../assets/png/horizon-project.png" class="bg">
                         <div class="content">
@@ -177,49 +185,34 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card memory-game">
                     <div class="project-content">
-                        <img src="../../../assets/png/adidas-project.png" class="bg">
+                        <img src="../../../assets/png/memory-game-project.png" class="bg">
                         <div class="content">
                             <div class="languages">
                                 <span>HTML</span>
                                 <span>CSS</span>
                                 <span>JS</span>
                             </div>
-                            <a href="https://github.com/senarthur/Landing-Page-Adidas" target="_blank">
+                            <a href="https://github.com/senarthur/Jogo-da-Memoria" target="_blank">
                                 <img src="../../../assets/svg/github.svg" alt="ícone git hub">
                                 <span>Ver código</span>
                             </a>
                             <div class="title">
-                                <h4>Adidas</h4>
-                                <span>Landing Page</span>
+                                <h4>Jogo da Memória</h4>
+                                <span>Jogo Interativo</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-content">
-                        <img src="../../../assets/png/task-project.png" class="bg">
-                        <div class="content">
-                            <div class="languages">
-                                <span>Angular</span>
-                            </div>
-                            <a href="https://github.com/senarthur/lista-tarefa-angular" target="_blank">
-                                <img src="../../../assets/svg/github.svg" alt="ícone git hub">
-                                <span>Ver código</span>
-                            </a>
-                            <div class="title">
-                                <h4>Lista de Tarefas</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
+                <div class="project-card pokedex">
                     <div class="project-content">
                         <img src="../../../assets/png/pokedex-project.png" class="bg">
                         <div class="content">
                             <div class="languages">
                                 <span>Ionic</span>
+                                <span>Angular</span>
+                                <span>TS</span>
                             </div>
                             <a href="https://github.com/senarthur/pokedex-atividade" target="_blank">
                                 <img src="../../../assets/svg/github.svg" alt="ícone git hub">
@@ -231,33 +224,25 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card animals-adoption">
                     <div class="project-content">
-                        <img src="../../../assets/png/task-react-project.png" class="bg">
+                        <img src="../../../assets/png/animals-adoption-project.png" class="bg">
                         <div class="content">
                             <div class="languages">
-                                <span>React</span>
+                                <span>Ionic</span>
+                                <span>Angular</span>
+                                <span>TS</span>
                             </div>
-                            <a href="https://github.com/senarthur/ToDoList-React" target="_blank">
+                            <a href="https://github.com/senarthur/lista-tarefa-angular" target="_blank">
                                 <img src="../../../assets/svg/github.svg" alt="ícone git hub">
                                 <span>Ver código</span>
                             </a>
                             <div class="title">
-                                <h4>Lista de Tarefas</h4>
+                                <h4>Adoção de Animais</h4>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="arrow-left" #arrowLeft (click)="slideToLeft()">
-                <svg width="17" height="26" viewBox="0 0 17 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15 24L2.18044 13.1527C2.08602 13.0728 2.08602 12.9272 2.18044 12.8473L15 2" stroke="white" stroke-width="3" stroke-linecap="round"/>
-                </svg>
-            </div>
-            <div class="arrow-right" #arrowRight (click)="slideToRight()">
-                <svg width="17" height="26" viewBox="0 0 17 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2 2L14.8196 12.8473C14.914 12.9272 14.914 13.0728 14.8196 13.1527L2 24" stroke="white" stroke-width="3" stroke-linecap="round"/>
-                </svg>
             </div>
         </div>
     </section>
