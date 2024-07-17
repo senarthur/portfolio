@@ -98,4 +98,12 @@ export class ProjectsComponent {
       return name.includes(word);
     })
   }
+
+  reverse(event: any) {
+    const element = event.target.parentNode;
+
+    element.classList.toggle('activated');
+    this.filteredProjects = this.filteredProjects.reverse();
+    
+  }
 }

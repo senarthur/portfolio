@@ -61,6 +61,33 @@
             }
         }
 
+        .filter-option {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-top: 15px;
+
+            span {
+                color: var(--highlight-secondary);
+            }
+            
+            .reverse {
+                width: 40px;
+                height: 40px;
+                background-color: rgba(0, 0, 0, 0.3);
+                padding: 5px;
+                border-radius: 10px;
+                margin-left: 10px;
+
+                cursor: pointer;
+
+                &.activated {
+                    background-color: rgba(0, 0, 0, 1);
+                }
+            }
+        }
+
         .projects {
             display: flex;
             flex-direction: column;
