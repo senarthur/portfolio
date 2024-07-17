@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { IProject } from '../../model/project.model';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
   imports: [
-    FooterComponent
+    FooterComponent,
+    RouterLink
   ],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'

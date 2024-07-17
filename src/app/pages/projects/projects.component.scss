@@ -21,6 +21,7 @@
         h1 {
             font-family: Arial, Helvetica, sans-serif;
             color: var(--highlight-color);
+            cursor: pointer;
         }
     }
 
@@ -129,7 +130,7 @@
 
                     .image {
                         border-radius: 25px;
-        
+
                         img {
                             border-radius: 25px;
                         }
@@ -167,5 +168,44 @@
                 }
             }
         }
+    }
+}
+
+@media (max-width: 768px) {
+    h4 {
+        font-size: 25px !important;
+    }
+
+    .projects span {
+        font-size: 14px !important;
+    }
+
+    .projects img {
+        width: 180px;
+    }
+}
+
+@media (max-width: 690px) {
+    h3 {
+        font-size: 35px !important;
+    }
+    
+    h4 {
+        font-size: 20px !important;
+    }
+
+    .projects span {
+        font-size: 12px !important;
+    }
+
+    .projects svg, .logo {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    .box {
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
     }
 }
