@@ -85,10 +85,17 @@ export class ProjectsComponent {
       link: 'https://github.com/senarthur/springboot-project-order'
     },
   ]
+
+  filteredProjects: IProject[] = this.projects;
   
   constructor() { }
 
-  search() {
-    console.log('Pesquisou')
+  search(event: any) {
+    let word = event.target.value.toUpperCase();
+    
+    this.filteredProjects = this.projects.filter(project => {
+      let name = project.title.toUpperCase();
+      return name.includes(word);
+    })
   }
 }
