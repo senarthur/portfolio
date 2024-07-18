@@ -564,12 +564,13 @@ p {
                 font-size: 16px;
             }
 
-            input[type="button"] {
+            button[type="submit"] {
                 outline: none;
                 border: none;
 
                 padding: 20px;
                 width: 150px;
+                height: 70px;
                 background-color: var(--highlight-secondary);
                 color: #1A1D22;
                 border-radius: 20px;
@@ -580,6 +581,11 @@ p {
 
                 &:hover {
                     background-color: var(--highlight-color);
+                }
+
+                svg {
+                    width: 30px;
+                    animation: rotate 1s linear infinite;
                 }
             }
         }
@@ -662,5 +668,22 @@ p {
                 }
             }
         }
+    }
+
+    #contact span {
+        font-size: 14px !important;
+    }
+
+    #contact .flex {
+        flex-direction: column;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }
