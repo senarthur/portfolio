@@ -1,0 +1,89 @@
+#skills {
+    background-color: #1e1e1e;
+    min-height: 50dvh;
+
+    h3 {
+        font-size: 40px;
+        text-align: center;
+        color: var(--highlight-color);
+    }
+
+    .skills {
+        margin-top: 90px;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 90px;
+        
+        .languages, .framework {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            .skill {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 100px;
+                cursor: default;
+
+                .circle {
+                    width: 52px;
+                    height: 52px;
+                    border-radius: 52px;
+    
+                    border: 1px solid var(--highlight-color);
+                    padding: 10px;
+                    text-align: center;
+    
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+    
+                    position: relative;
+                    z-index: 2;
+    
+                    &::before {
+                        content: "";
+                        width: 52px;
+                        height: 52px;
+                        position: absolute;
+                        background-color: var(--highlight-color);
+                        border-radius: 52px;
+                        transform: scale(0);
+                        transition: .3s ease-in-out;
+                    }
+    
+                    &:hover {
+                        &::before {
+                            transform: scale(1);
+                            z-index: -1;
+                        }
+    
+                        svg path {
+                            fill: #000;
+                        }
+
+                        .java path {
+                            fill: none;
+                            stroke: #000;
+                        }
+                    }
+                }
+            }
+
+            
+
+            span {
+                display: block;
+                color: var(--highlight-color);
+                text-align: center;
+            }
+        }
+    }
+}

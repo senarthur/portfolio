@@ -20,3 +20,11 @@ a {
     text-decoration: none;
     color: var(--highlight-color);
 }
+
+section {
+    padding: var(--section-padding);
+}
+
+p {
+    font-size: clamp(12px, 12px + 1vw, 24px);
+}
