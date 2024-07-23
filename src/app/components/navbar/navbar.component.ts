@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -10,6 +10,18 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 export class NavbarComponent {
 
   @ViewChild('navbar') navbar!: ElementRef;
+  @ViewChild('progressBar') progressBar!: ElementRef;
+
+  private height: number = 0;
+
+  @HostListener('window:scroll') onWindowScroll() {
+    this.height = window.document.documentElement.scrollHeight - window.document.documentElement.clientHeight;
+
+    const scroll = window.document.documentElement.scrollTop;
+    let progressRoll = (scroll / this.height) * 100;
+
+    this.progressBar.nativeElement.style.width = `${progressRoll}%`
+  }
 
   activeNavbar() {
     this.navbar.nativeElement.classList.add('active');

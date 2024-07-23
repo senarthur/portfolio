@@ -119,6 +119,17 @@ nav {
     display: flex !important;
 }
 
+.progress-bar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 0;
+    height: 3px;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
 @media (max-width: 875px) {
     nav {
         .nav-links {
