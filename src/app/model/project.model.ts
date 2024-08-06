@@ -106,15 +106,9 @@ export interface IGitHubProjectsModel {
 }
 
 export function GitHubProjectsModelToIProject(project: IGitHubProjectsModel): IProject {
-    const date = new Date(Date.parse(project.updated_at));
-    const dateNum = date.getDate();
-    const month = date.getMonth() + 1;
-    const year = date.getFullYear();
-    const stringDate = `${dateNum}/${month}/${year}`;
-    
     return {
         title: project.name,
         link: project.html_url,
-        date: stringDate
+        date: project.updated_at
     }
 }

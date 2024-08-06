@@ -13,9 +13,16 @@
         </div>
         <div class="filter-option">
             <span>Opções de filtragem: </span>
-            <div class="reverse" (click)="reverse($event)">
+            <div class="option reverse" (click)="reverse($event)">
+                <span class="alt_text">Reverso</span>
                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15 12.143L9.28573 6.42871M9.28573 6.42871L3.57145 12.143M9.28573 6.42871L9.28573 23.5716M26.4286 17.8573L20.7143 23.5716M20.7143 23.5716L15 17.8573M20.7143 23.5716L20.7143 6.42871" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>    
+            </div>
+            <div class="option date" (click)="orderByDate($event)">
+                <span class="alt_text">Ordernar por data</span>
+                <svg width="30" height="30" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.50004 15.8335C11.1797 15.8335 12.7907 15.1662 13.9784 13.9785C15.1661 12.7908 15.8334 11.1799 15.8334 9.50016C15.8334 7.82046 15.1661 6.20955 13.9784 5.02182C12.7907 3.83409 11.1797 3.16683 9.50004 3.16683C7.82034 3.16683 6.20943 3.83409 5.0217 5.02182C3.83397 6.20955 3.16671 7.82046 3.16671 9.50016C3.16671 11.1799 3.83397 12.7908 5.0217 13.9785C6.20943 15.1662 7.82034 15.8335 9.50004 15.8335ZM9.50004 1.5835C10.5397 1.5835 11.5691 1.78827 12.5296 2.18612C13.4901 2.58397 14.3628 3.1671 15.098 3.90223C15.8331 4.63736 16.4162 5.51009 16.8141 6.47059C17.2119 7.43108 17.4167 8.46053 17.4167 9.50016C17.4167 11.5998 16.5826 13.6134 15.098 15.0981C13.6133 16.5828 11.5997 17.4168 9.50004 17.4168C5.12212 17.4168 1.58337 13.8543 1.58337 9.50016C1.58337 7.40053 2.41745 5.3869 3.90211 3.90223C5.38677 2.41757 7.40041 1.5835 9.50004 1.5835ZM9.89587 5.54183V9.69808L13.4584 11.8118L12.8646 12.7856L8.70837 10.2918V5.54183H9.89587Z" fill="#EBEBEB"/>
                 </svg>    
             </div>
         </div>
@@ -28,7 +35,7 @@
                         </div>
                         <div class="card-content">
                             <h4>{{ project.title }}</h4>
-                            <span>Última atualização: {{ project.date }}</span>
+                            <span>Última atualização: {{ project.date | date: 'dd/MM/yyyy' }}</span>
                             <div class="code">
                                 <div class="github">
                                     <div class="logo">

@@ -3,13 +3,15 @@ import { FooterComponent } from '../../components/footer/footer.component';
 import { GitHubProjectsModelToIProject, IGitHubProjectsModel, IProject } from '../../model/project.model';
 import { RouterLink } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
   imports: [
     FooterComponent,
-    RouterLink
+    RouterLink,
+    CommonModule
   ],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
@@ -19,9 +21,7 @@ export class ProjectsComponent implements OnInit {
   private readonly URL_REPOS: string = 'https://api.github.com/users/senarthur/repos';
   gitHubProjects: IProject[] = [];
   
-  projects: IProject[] = [
-    
-  ]
+  projects: IProject[] = []
 
   filteredProjects: IProject[] = this.projects;
   
@@ -50,6 +50,16 @@ export class ProjectsComponent implements OnInit {
 
     element.classList.toggle('activated');
     this.filteredProjects = this.filteredProjects.reverse();
-    
+  }
+
+  orderByDate(event: any) {
+    const element = event.target.parentNode;
+    element.classList.toggle('activated');
+
+    this.filteredProjects.sort((a, b) => {
+      let date1 = Date.parse(a.date);
+      let date2 = Date.parse(b.date);
+      return date1 - date2;
+    });
   }
 }
