@@ -6,15 +6,14 @@ import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-projects',
-  standalone: true,
-  imports: [
-    FooterComponent,
-    RouterLink,
-    CommonModule
-  ],
-  templateUrl: './projects.component.html',
-  styleUrl: './projects.component.scss'
+    selector: 'app-projects',
+    imports: [
+        FooterComponent,
+        RouterLink,
+        CommonModule
+    ],
+    templateUrl: './projects.component.html',
+    styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent implements OnInit {
 

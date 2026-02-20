@@ -3,14 +3,13 @@ import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
 
 @Component({
-  selector: 'app-contact',
-  standalone: true,
-  imports: [
-    FormsModule,
-    ReactiveFormsModule
-  ],
-  templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+    selector: 'app-contact',
+    imports: [
+        FormsModule,
+        ReactiveFormsModule
+    ],
+    templateUrl: './contact.component.html',
+    styleUrl: './contact.component.scss'
 })
 export class ContactComponent implements OnInit {
 

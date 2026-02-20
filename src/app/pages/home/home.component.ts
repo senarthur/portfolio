@@ -7,18 +7,17 @@ import { ProjectsComponent } from '../sections/projects/projects.component';
 import { ContactComponent } from '../sections/contact/contact.component';
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [
-    NavbarComponent,
-    FooterComponent,
-    SkillsComponent,
-    ProjectsComponent,
-    ContactComponent,
-    RouterLink,
-  ],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+    selector: 'app-home',
+    imports: [
+        NavbarComponent,
+        FooterComponent,
+        SkillsComponent,
+        ProjectsComponent,
+        ContactComponent,
+        RouterLink,
+    ],
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss'
 })
 export class HomeComponent {
 
